@@ -1,0 +1,69 @@
+
+version: 2
+
+models:
+  - name: tbl_stg_order_details
+    description: "Staging table for order details"
+    grain: order_detail_id # Each row is uniquely identified by order_id
+    columns:
+      - name: order_detail_id
+        description: "{{ doc('order_detail_id') }}"
+        data_tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: "{{ doc('order_id') }}"
+        data_tests:
+          - not_null
+      - name: product_id
+        description: "{{ doc('product_id') }}"
+      - name: quantity
+        description: "{{ doc('quantity') }}"
+      - name: order_date
+        description: "{{ doc('order_date') }}"
+      - name: net_price
+        description: "{{ doc('net_price') }}"
+
+  - name: tbl_stg_order
+    description: "Staging table for orders"
+    columns:
+      - name: product_id
+        description: "{{ doc('product_id') }}"
+        data_tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: "{{ doc('user_id') }}"
+      - name: branch_id
+        description: "{{ doc('branch_id') }}"
+      - name: order_date
+        description: "{{ doc('order_date') }}"
+      - name: net_amount_total
+        description: "{{ doc('net_amount_total') }}"
+
+  - name: tbl_stg_products
+    description: "Staging table for Products details"
+    columns:
+      - name: product_id
+        description: "{{ doc('product_id') }}"
+        data_tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: "{{ doc('product_name') }}"
+      - name: product_category
+        description: "{{ doc('product_category') }}"
+
+
+  - name: tbl_stg_products
+    description: "Staging table for Products details"
+    columns:
+      - name: user_id
+        description: "{{ doc('user_id') }}"
+        data_tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: "{{ doc('created_at') }}"
+      - name: product_category
+        description: "{{ doc('deleted_at') }}"

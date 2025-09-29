@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: OPS_REPORTING_LAYER_RAW  # source name you will reference in your models
+    database: CIRCUS_OPS_REPORTING_LAYER  # Snowflake database
+    schema: RAW                   # Snowflake schema
+    tables:
+      - name: ORDER_DETAILS        # actual table name in Snowflake
+        description: "Raw table containing detailed information regarding each individual order."
+      - name: ORDERS                # actual table name in Snowflake
+        description: "Raw table containing summary information regarding customer orders."
+      - name: PRODUCTS              # actual table name in Snowflake
+        description: "Raw table containing product details."
+      - name: USERS             # actual table name in Snowflake
+        description: "Raw table containing customer information."
