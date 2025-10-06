@@ -1,3 +1,6 @@
+## 📁 Project Structure
+
+```bash
 .
 ├── models/
 │   ├── staging/
@@ -17,4 +20,6 @@
 └── dbt_project.yml
 
 
-<img width="599" height="394" alt="image" src="https://github.com/user-attachments/assets/7b423578-a8cc-4f0a-a913-dc7f4a1bc890" />
+
+<img width="707" height="344" alt="image" src="https://github.com/user-attachments/assets/0b259819-865b-4a7c-a5d3-dd428c618310" />
+
